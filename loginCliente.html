@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login cliente</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <div class="container">
+    <div class="loginmodal-container">
+        <form id="frmLoginCli" action="conectarFB.html">
+        <input type="text" name="user" placeholder="Usuário">
+        <input type="password" name="pass" placeholder="Senha">
+        <input type="button" id="loginCli" name="login" class="login loginmodal-submit" value="Login">
+        </form>
+
+        <div id="revendedores">
+          <p>Bem vindo, Bruno!</p>
+          <a href="#" data-toggle="modal" data-target="#myModal2" class="btn-default conectRev" id="btnAddProd">Conectar a seus revendedores</a>
+          <a id="btnEnviarPed" class="btn-success searchRev" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Procurar por revendedores
+  </a>
+
+  <div class="collapse" id="collapseExample">
+    <div class="well">
+      <input type="text" placeholder="Procurar..." />
+      <input style="border-radius:5px; padding:5px; border:1px solid #ccc;" id="btnSrchRev"  type="button" value="OK" />
+    </div>
+  </div>
+
+
+        </div>
+
+
+        <div id="loading">
+          <div class="spinner">
+  <div class="bounce1"></div>
+  <div class="bounce2"></div>
+  <div class="bounce3"></div>
+</div>
+        </div>
+      </div>
+      <div id="listaRevendedores">
+        <ul>
+          <li  data-toggle="modal" data-target="#modalPedido">Revendedor</li>
+          <li  data-toggle="modal" data-target="#modalPedido">Revendedor</li>
+          <li  data-toggle="modal" data-target="#modalPedido">Revendedor</li>
+          <li  data-toggle="modal" data-target="#modalPedido">Revendedor</li>
+        </ul>
+        <a href="loginCliente.html" class="btn-default btnVoltar" id="btnAddProd">Voltar</a>
+      </div>
+  </div>
+
+  <!-- Modal add produto -->
+  <div class="modal fade" id="modalPedido" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Pedidos</h4>
+        </div>
+        <div class="modal-body">
+          <ul id="listaProdutos">
+            <li data-toggle="modal" class="btnPed" data-target="#detPedido">Pedido 101</li>
+            <li data-toggle="modal" class="btnPed" data-target="#detPedido">Pedido 195</li>
+          </ul>
+
+        </div>
+        <div class="modal-footer">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="detPedido" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Pedido 101</h4>
+        </div>
+        <div class="modal-body">
+          <ul id="listaProdutos">
+            <li>produto #1</li>
+            <li>produto #2</li>
+            <li>produto #3</li>
+            <li>produto #4</li>
+            <li>produto #5</li>
+          </ul>
+
+        </div>
+        <div class="modal-footer">
+          <a href="editarPedido.html" onclick="$('#detPedido').modal('hide')" class="btn-default" id="btnEnviarPed">Modificar</a>
+          <a href="#" data-dismiss="modal" class="btn-success" id="btnEnviarPed">Aprovar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        $("#loginCli").click( function()
+             {
+              $("#frmLoginCli").hide();
+             $("#revendedores").show();
+            });
+
+          $(".conectRev").click( function()
+               {
+                 $("#loading").show().delay(2000).queue(function(n) {
+                  $(this).hide(); $('.loginmodal-container').hide(); $('#listaRevendedores').show();
+                });
+
+               }
+            )
+
+          $("#btnSrchRev").click( function()
+               {
+                 $("#loading").show().delay(2000).queue(function(n) {
+                  $(this).hide(); $('.loginmodal-container').hide(); $('#listaRevendedores').show();
+                });
+
+               }
+            )
+    </script>
+
+  </body>
+</html>
