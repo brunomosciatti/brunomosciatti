@@ -111,6 +111,14 @@ ul {
 #loading,#listaPessoas {
   display: none;
 }
+#listaPessoas li {
+  background:#ccc;
+  border:1px solid #ddd;
+  border-radius: 4px;
+  padding:3px;
+  margin-bottom:10px;
+
+}
 #btnFace {
   border-radius: 5px;
 }
@@ -219,4 +227,19 @@ ul {
 
 .btn-pedido {
   color:#fff!important;
+}
+
+
+input[type=number] {
+  width:50px;
+  position: relative;
+  left:100px;
+}
+
+#btnCriarPedido,.btnEnvPara  {
+  border: 1px solid #ddd;
+border-radius: 5px;
+padding: 10px;
+text-align: center;
+margin-bottom: 30px;
 }
