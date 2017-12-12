@@ -1,5 +1,4 @@
 * {
-  font-family: Tahoma, Arial;
 }
 ul {
   list-style-type: none;
@@ -9,6 +8,7 @@ ul {
 
 /****** LOGIN MODAL ******/
 .loginmodal-container {
+  font-family: Tahoma, Arial;
   padding: 30px;
   max-width: 350px;
   width: 100% !important;
