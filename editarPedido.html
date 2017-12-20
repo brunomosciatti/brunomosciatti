@@ -29,12 +29,14 @@
           <ul>
             <li>Produto #19283 - 1 un. <a style="float:right; margin-left:10px;" class="fa fa-trash fa-lg"></a><a style="float:right;" class="fa fa-pencil fa-lg"></a></li>
             <li>Produto #89512 - 5 un. <a style="float:right; margin-left:10px;" class="fa fa-trash fa-lg"></a><a style="float:right;" class="fa fa-pencil fa-lg"></a></li>
+            <li id="inputProd"><input style="width:50%; height:20px" type="text"/><input type="number" min="0" name="quantity" style=" height:20px"></li>
+            <p id="addProd">Adicionar produto</p>
           </ul>
 
         </div>
 
         <div class="btnPs" style="margin-top:20px;">
-          <a href="#" class="btn-default" id="btnVoltar">Voltar</a>
+          <a href="javascript:history.back()" class="btn-default" id="btnVoltar">Voltar</a>
           <a href="#" style= "float:right;" class="btn-success" id="btnEnviarPed">Enviar</a>
         </div>
         <div id="loading">
@@ -77,6 +79,12 @@
             });
 
            }
+        );
+
+        $("#addProd").click( function() {
+          //$('#addProd').hide();
+          $('#inputProd').show();
+          }
         );
 
     </script>

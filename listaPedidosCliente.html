@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>app</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <div class="container">
+      <div class="container">
+        <div id="listaPessoas2">
+
+            <ul>
+              <li><a href="historicoClientes.html">Cliente 1</a></li>
+              <li><a href="historicoClientes.html">Cliente 2</a></li>
+              <li><a href="historicoClientes.html">Cliente 3</a></li>
+              <li><a href="historicoClientes.html">Cliente 4</a></li>
+              <li><a href="historicoClientes.html">Cliente 5</a></li>
+            </ul>
+
+        </div>
+        <a href="javascript:history.back()" class="btn-default" id="btnVoltar">Voltar</a>
+    </div>
+
+
+
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+
+      $("#btnFace").click( function()
+           {
+             $("#loading").show().delay(3000).queue(function(n) {
+              $(this).hide(); $('#btnFace').val('Conectado'); $('.loginmodal-container').hide(); $('#listaPessoas').show();
+            });
+
+           }
+        )
+  });
+
+    </script>
+
+  </body>
+</html>
