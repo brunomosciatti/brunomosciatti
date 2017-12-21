@@ -288,3 +288,9 @@ overflow: auto;
 #pedido {
   display:none;
 }
+
+
+.prods-cat li{
+  background:#eaeaea!important;
+  margin-left:5px;
+}

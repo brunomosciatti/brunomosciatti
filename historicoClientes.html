@@ -21,7 +21,7 @@
   </head>
   <body>
   <div class="container">
-    <h4>#001 - Bruno Mosciatti - Pedidos</h4>
+    <h4>#001 - Bruno Mosciatti - Pedidos <a class="btn btn-default" data-toggle="modal" data-target="#myModalPerfil" style="float:right;margin-bottom:15px;">Perfil do cliente</a></h4>
     <table class="table table-striped">
       <tr>
         <td>08/12/2017</td>
@@ -72,6 +72,37 @@
         <div class="modal-footer">
           <a href="#" data-toggle="modal" data-target="#myModal2" class="btn-default" id="btnAddProd">Adicionar produto</a>
           <a href="#" data-dismiss="modal" onclick="alert('Pedido enviado com sucesso!')" class="btn-success" id="btnEnviarPed">Enviar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModalPerfil" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Bruno Mosciatti #192831</h4>
+        </div>
+        <div class="modal-body">
+
+          <ul id="listaProdutos2222">
+            <li><strong>Idade: </strong>24 anos</li>
+            <li><strong>Qtd de pessoas na família: </strong>4 pessoas</li>
+            <li><strong>Rede de contatos do Facebook: </strong>?</li>
+            <li><strong>Cor da pele: </strong>Branca</li>
+            <li><strong>CPF: </strong>365.118.668-74</li>
+            <li><strong>Cidade: </strong>Bauru-SP, 17012-110</li>
+            <li><strong>Perfil dos produtos utilizados: </strong>Perfumes</li>
+            <li><strong>Nível de consumo: </strong>2 pedidos por mês</li>
+
+          </ul>
+
+        </div>
+        <div class="modal-footer">
+
+          <a href="#" data-dismiss="modal" class="btn-default btn" id="">Fechar</a>
         </div>
       </div>
     </div>

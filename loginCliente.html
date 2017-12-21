@@ -42,7 +42,7 @@
       <input style="border-radius:5px; padding:5px; border:1px solid #ccc;" id="btnSrchRev"  type="button" value="OK" />
     </div>
   </div>
-
+<a id="pedidoPendente" data-toggle="modal" data-target="#modalPedido"  style="opacity:1;margin-top:20px; font-size:16px;">Você tem <span class="label label-warning">02</span> pedidos pendentes</a>
 
         </div>
 
@@ -54,13 +54,14 @@
   <div class="bounce3"></div>
 </div>
         </div>
+
       </div>
       <div id="listaRevendedores">
         <ul>
-          <li  data-toggle="modal" data-target="#modalPedido">Revendedor 1</li>
-          <li  data-toggle="modal" data-target="#modalPedido">Revendedor 2</li>
-          <li  data-toggle="modal" data-target="#modalPedido">Revendedor 3</li>
-          <li  data-toggle="modal" data-target="#modalPedido">Revendedor 4</li>
+          <li  data-toggle="modal" data-target="#modalPedido">Revendedor 1 <a href="#" onClick="alert('Revendedor vinculado');" style="height:20px; padding:5px; line-height:9px; float:right" class="btn-success btn" id="btnVincular">Vincular</a></li>
+          <li  data-toggle="modal" data-target="#modalPedido">Revendedor 2<a href="#" onClick="alert('Revendedor vinculado');" style="height:20px; padding:5px; line-height:9px; float:right" class="btn-success btn" id="btnVincular">Vincular</a></li>
+          <li  data-toggle="modal" data-target="#modalPedido">Revendedor 3<a href="#" onClick="alert('Revendedor vinculado');" style="height:20px; padding:5px; line-height:9px; float:right" class="btn-success btn" id="btnVincular">Vincular</a></li>
+          <li  data-toggle="modal" data-target="#modalPedido">Revendedor 4<a href="#" onClick="alert('Revendedor vinculado');" style="height:20px; padding:5px; line-height:9px; float:right" class="btn-success btn" id="btnVincular">Vincular</a></li>
         </ul>
         <a href="loginCliente.html" class="btn-default btnVoltar" id="btnAddProd">Voltar</a>
       </div>

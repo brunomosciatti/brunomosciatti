@@ -45,13 +45,46 @@
                 <div class="well">
                   <p><strong>Pedido 101</strong></p>
 
-                  <ul>
-                    <li><input type="checkbox"/>produto 101<input type="number" min="0" name="quantity"></li>
-                    <li><input type="checkbox"/>produto 101<input type="number" min="0" name="quantity"></li>
-                    <li><input type="checkbox"/>produto 101<input type="number" min="0" name="quantity"></li>
-                    <li><input type="checkbox"/>produto 101<input type="number" min="0" name="quantity"></li>
-                    <a href="#" data-toggle="modal" data-target="#myModal" data-dismiss="modal" class="btn-success" id="btnEnviarPed">Criar pedido</a>
+                  <ul id="categorias">
+                    <li data-toggle="collapse" data-target="#demo">
+                      Perfumes
+                    </li>
+                    <div style="margin-left:5px;" id="demo" class="collapse">
+                      <ul class="prods-cat">
+                        <li><input type="checkbox"/>Perfume 1<input type="number" min="0" name="quantity"></li>
+                        <li><input type="checkbox"/>Perfume 2<input type="number" min="0" name="quantity"></li>
+                        <li><input type="checkbox"/>Perfume 3<input type="number" min="0" name="quantity"></li>
+
+                      </ul>
+                    </div>
+
+                    <li data-toggle="collapse" data-target="#demo2">
+                      Maquiagem
+                    </li>
+                    <div style="margin-left:5px;" id="demo2" class="collapse">
+                      <ul class="prods-cat">
+                        <li><input type="checkbox"/>Make 1<input type="number" min="0" name="quantity"></li>
+                        <li><input type="checkbox"/>Make 2<input type="number" min="0" name="quantity"></li>
+                        <li><input type="checkbox"/>Make 3<input type="number" min="0" name="quantity"></li>
+
+                      </ul>
+                    </div>
+
+                    <li data-toggle="collapse" data-target="#demo3">
+                       beauty & beautique
+                    </li>
+                    <div style="margin-left:5px;" id="demo3" class="collapse">
+                      <ul class="prods-cat">
+                        <li><input type="checkbox"/>beauty & beautique 1<input type="number" min="0" name="quantity"></li>
+                        <li><input type="checkbox"/>beauty & beautique 2<input type="number" min="0" name="quantity"></li>
+                        <li><input type="checkbox"/>beauty & beautique 3<input type="number" min="0" name="quantity"></li>
+
+                      </ul>
+                    </div>
+
+
                   </ul>
+                  <a href="#" style="margin-top:20px;" data-toggle="modal" data-target="#myModal" data-dismiss="modal" class="btn-success" id="btnEnviarPed">Criar pedido</a>
 
                 </div>
               </div>
