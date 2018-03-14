@@ -1,3 +1,6 @@
+h1 {
+	color:#ef008c;
+}
 /* Main form wrapper */
 .fs-form-wrap {
 	position: relative;
@@ -52,15 +55,15 @@
 	width: 100%;
 	height: 100%;
 	background: #fffed8;
-	color: #3b3f45;
+	color: #e9e9e9;
 	font-size: 1.2em;
 }
 
 .fs-form-overview .fs-fields::before {
 	display: block;
 	margin-bottom: 2.5em;
-	color: #3b3f45;
-	content: 'Review & Submit';
+	color: #e9e9e9;
+	content: 'Confirmar respostas';
 	font-weight: 700;
 	font-size: 1.85em;
 }
@@ -96,7 +99,7 @@
 
 /* Visibility control of elements */
 .fs-form-full .fs-fields > li,
-.fs-nav-dots, 
+.fs-nav-dots,
 .fs-progress,
 .fs-numbers,
 button.fs-continue,
@@ -181,6 +184,7 @@ button.fs-continue,
 	padding: 0 5px 1em 0;
 	font-weight: 700;
 	pointer-events: none;
+	color:#ef008c;
 }
 
 .fs-form-full .fs-fields > li label[data-info]::after {
@@ -268,7 +272,7 @@ button.fs-continue,
 }
 
 .fs-fields input:focus {
-	background-color: #3b3f45; /* Fixes chrome bug with placeholder */
+	background-color: #e9e9e9; /* Fixes chrome bug with placeholder */
 }
 
 .fs-form-overview .fs-fields input:focus {
@@ -506,7 +510,7 @@ button.fs-continue,
 
 .fs-nav-dots button:hover::before,
 .fs-nav-dots button.fs-dot-current::before {
-	background: #fffed8;
+	background: #ef008c;
 }
 
 /* Progress bar */
@@ -666,7 +670,7 @@ button.fs-continue:hover {
 	text-align: center;
 	background: transparent;
 	color: rgba(0,0,0,0.3);
-	content: 'or press ENTER';
+	content: 'ou aperte ENTER';
 	font-size: 0.65em;
 	pointer-events: none;
 }
