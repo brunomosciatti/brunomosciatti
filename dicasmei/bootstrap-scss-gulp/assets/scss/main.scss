@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhaina');
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css");
+$lato: 'Lato', sans-serif;
+$baloo: 'Baloo Bhaina', cursive;
+$dm-color: #45b347;
+
+* {
+  font-family: $lato;
+}
+
+a {
+  transition: all 0.3s;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+em {
+  font-style: normal;
+}
+
+a.btn-default-dm {
+  background: $dm-color;
+  margin-top: 30px;
+  display: inline-block;
+  color: #fff;
+  font-family: $lato;
+  padding: 5px 15px 5px 30px;
+  border-radius: 5px;
+  font-size: 1.5em;
+
+  &:hover {
+    box-shadow: 0 16px 20px 0 rgba(69, 68, 68, 0.3);
+    padding: 8px 35px;
+  }
+
+  svg {
+    top: 3px;
+    position: relative;
+    left: -15px;
+  }
+}
+
+.breadcrumb-content {
+  border-bottom: 3px solid #ebebeb;
+  margin-bottom: 15px;
+
+  .breadcrumb {
+    background: none;
+    padding: 10px;
+    margin: 0;
+
+    li {
+      color: #666666;
+
+      a {
+        color: #666666;
+      }
+
+      &::before {
+        content: "> ";
+        padding: 0 5px;
+      }
+
+      &:first-child {
+        &::before {
+          content: "";
+        }
+      }
+
+      &.active {
+        text-decoration: underline;
+
+        &::before {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+/* landing page */
+.default-styles {
+  h2,
+  h3 {
+    font-family: $baloo;
+  }
+
+  h2 {
+    color: $dm-color;
+    font-size: 2.3em;
+    margin-bottom: 35px;
+  }
+
+  h3 {
+    font-size: 2em;
+    margin-left: 5px;
+
+    em {
+      font-family: $baloo;
+      color: $dm-color;
+    }
+  }
+
+  p {
+    font-family: $lato;
+    color: #333333;
+    font-size: 1.2em;
+
+    em {
+      font-weight: 700;
+    }
+  }
+}
+/* fim landing page */
+.dm-avatar {
+  /*background: url('/assets/images/dm_avatar.png');
+  height: 600px;
+  background-repeat: no-repeat;*/
+  img {
+    float: right;
+  }
+}
+/* primeiro passo */
+i.btn-back {
+  color: #000;
+  font-size: 0.656em;
+  margin-right: 15px;
+}
+
+.form-float-dm {
+  @mixin float-label-container {
+    display: block;
+    position: relative;
+  }
+  @mixin float-label {
+    > span,
+    label {
+      position: absolute;
+      left: 5px;
+      top: -5px;
+      background: #fff;
+      padding: 0 5px;
+      cursor: text;
+      font-size: 75%;
+      opacity: 1;
+      transition: all 0.2s;
+      @content;
+    }
+  }
+  @mixin float-label-input {
+    &::placeholder {
+      opacity: 1;
+      transition: all 0.2s;
+    }
+
+    &:placeholder-shown:not(:focus)::placeholder {
+      opacity: 0;
+    }
+  }
+  @mixin float-label-scaled {
+    &:placeholder-shown:not(:focus) + * {
+      font-size: 100%;
+      opacity: 0.5;
+      @content;
+      top: 0.8em!important;
+    }
+  }
+  /* Default styling
+ * https://github.com/tonystar/float-label-css/blob/master/scss/float-label.scss
+ */
+  .has-float-label {
+    @include float-label-container;
+    @include float-label;
+
+    select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+
+    input,
+    select {
+      @include float-label-input;
+      font-size: inherit;
+      padding-top: 1em;
+      margin-bottom: 2px;
+      border-radius: 0;
+
+      select {
+        border: 0;
+      }
+
+      input {
+        border: 1px solid #000!important;
+      }
+      @include float-label-scaled {
+        top: 0.25em;
+      }
+
+      &:focus {
+        outline: none;
+        border-color: rgba(0,0,0,.5);
+      }
+    }
+
+    select {
+      padding-right: 1em;
+      background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23333' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right 0.5em bottom 0.25em;
+      background-size: 8px 10px;
+    }
+  }
+  // Custom styling
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    position: relative;
+    max-width: 20rem;
+    background: #eee;
+    margin: 2rem auto;
+  }
+
+  fieldset {
+    padding: 1.5rem;
+    background: white;
+  }
+
+  input,
+  select {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  button {
+    background: #333;
+    color: white;
+    border: 0;
+    padding: 0.5em 1em;
+    margin-top: 1rem;
+  }
+
+  a {
+    display: block;
+    padding: 10px;
+    position: absolute;
+    z-index: -1;
+    top: 1rem;
+    left: 100%;
+    margin-left: -65px;
+    transition: all 0.2s;
+  }
+
+  a:hover {
+    margin-left: 0;
+  }
+
+  a.modalTermos {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  #chkTermos {
+    width: auto!important;
+  }
+
+  #CPF {
+    width: 200px;
+  }
+
+  #frm_DtNasc {
+    width: 150px;
+  }
+
+  .input-group {
+    display: table;
+    width: 100%;
+  }
+
+  .input-group > * {
+    display: table-cell;
+    width: 50%;
+  }
+}
+
+.input-dm {
+  border: 1px solid #000;
+  margin-bottom: 15px!important;
+}
+
+.input-error {
+  border: 1px solid red;
+  color: red;
+}
+
+.svg-voltar {
+  fill {
+    color: red!important;
+  }
+}
+
+.dm-form-progress {
+  background: #ebebeb;
+  border-radius: 8px;
+  padding: 20px 15px 15px;
+  margin-top: 20px;
+
+  .step_title {
+    font-weight: 700;
+    font-size: 16px;
+    color: #002042;
+    text-align: center;
+    width: 100%;
+  }
+
+  .progress {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #a9d3ff;
+    border: 3px solid #fff;
+    height: 25px;
+    border-radius: 8px;
+
+    .progress-bar {
+      background-color: #002042;
+    }
+  }
+
+  .progress-num {
+    width: 100%;
+    text-align: center;
+    color: #002042;
+    font-size: 14px;
+    display: block;
+  }
+
+  .baloon-tips {
+    background: #a9d3ff;
+    border: 3px solid #fff;
+    border-radius: 8px;
+    float: left;
+    width: 100%;
+    margin-top: 30px;
+
+    img {
+      position: relative;
+      bottom: -18px;
+      float: right;
+    }
+
+    p {
+      padding: 15px;
+      width: 65%;
+      color: #000;
+    }
+  }
+}
+.step-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom:0px;
+}
+.step-description {
+  font-size: 14px;
+  margin-bottom:30px;
+}
+
+.dm-selector {
+  position: relative;
+  .dm-selector input{
+      margin:0;padding:0;
+      -webkit-appearance:none;
+         -moz-appearance:none;
+              appearance:none;
+  }
+  .homework{background-image:url('/assets/images/rdHomework.png');}
+  .nowork{background-image:url('/assets/images/rdNowork.png');}
+
+  .workcard-dm{
+      cursor:pointer;
+      background-size:contain;
+      background-repeat:no-repeat;
+      display:inline-block;
+      width:100px;height:70px;
+  }
+
+  #homework,#nowork {
+    position: absolute;
+    top: 0px;
+    left: 51.5px;
+  }
+  #nowork {
+    left:157.5px;
+  }
+}
+
+.form-end {
+  width: 100%!important;
+  #cepComercial {
+    width: 150px!important;
+  }
+}

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DicasMEI - Bruno Mosciatti</title>
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/main.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <script src="assets/js/vendors/jquery-1.11.3.min.js"></script>
+  <script src="assets/js/vendors/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.js" type="text/javascript" asp-append-version="true"></script>
+
+
+
+  <div class="row breadcrumb-content">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item"><a href="#">Serviços</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Criar minha MEI</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <div class="row default-styles">
+    <div class="container">
+      <div class="col-md-8 col-xs-12">
+        <h2><a href="index.html" title="voltar"><!--<i class="glyphicon glyphicon-chevron-left btn-back"></i>--><img src="https://image.flaticon.com/icons/svg/126/126492.svg" width="20" height="20"></a>Abrir minha MEI</h2>
+        <p class="step-title">Passo 1: Meus dados</p>
+        <p class="step-description">Você trabalha e a DicasMEI cuida da sua empresa. Seja um MEI agora mesmo!</br>
+          <em>Seu CNPJ e CCMEI saem na hora!</em> </p>
+
+        <!-- form -->
+        <form action="submit" id="frm_step1">
+          <div class="input-group form-float-dm">
+            <div class="has-float-label">
+              <input id="CPF" name="CPF" required onBlur="javascript:validaCPF(this);" class="input-dm" type="text" placeholder="CPF" />
+              <label for="CPF">CPF</label>
+              <!--<p class="msgErro"></p>-->
+            </div>
+            <div class="has-float-label">
+              <input id="frm_DtNasc" required class="input-dm" type="date" placeholder="Data de Nascimento" />
+              <label for="frm_DtNasc">Data de Nascimento</label>
+            </div>
+
+            <input id="chkTermos" name="chkTermos" class="checkbox-dm" type="checkbox" />
+            <label for="chkTermos">Li e concordo com os <a class="modalTermos" data-toggle="modal" data-target="#modalTermos" href="#">termos de aceite do serviço de formalização da MEI</a></label>
+
+          </div>
+        </form>
+        <div style="margin-top:20px;" class="col-md-12 col-xs-12">
+          <a style="float:left; color:#000;font-size:16px" href="index.html">
+              <img src="https://image.flaticon.com/icons/svg/126/126492.svg" alt="Voltar" title="Voltar" width="20" height="20">
+              Voltar
+            </a>
+          <a style="float:right; margin-top:0;" class="btn-default-dm" href="step_2.html">
+              <svg width="13px" height="23px">
+              <image x="0px" y="0px" width="13px" height="23px" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAXCAQAAAB6rw0KAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfiBRYKHQ2mgAJtAAAAoElEQVQoz43SIQ7CQBCF4UeaIDDcAIVFoyuxWLgAB+AAHADPAUqCwWCRKM6ARSGaYCpIyl/REXSa2bArVnzZ7M6bERln7oyR36IA4MaoTw/adWXoacLT8ELWJTHlZXj8xfaYURoeGHRJzHkb7j2JnMpw50ks+BhuPYklteHGk1gbfVn14uFkWP19K3wr/GFYV5hGmGGYfKJfiS4nZiOcqAYiIIzWFwfBowAAAABJRU5ErkJggg=="></image>
+              </svg>
+              Próximo Passo
+            </a>
+        </div>
+
+
+        <!-- Modal Termos -->
+        <div class="modal fade" id="modalTermos" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Termos de Aceite do Serviço de Formalização da MEI</h4>
+              </div>
+              <div class="modal-body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Entendido!</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- fim form -->
+
+      </div>
+      <div class="col-md-4 col-xs-12 dm-form-progress">
+        <p class="step_title">Passo 1 de 7</p>
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+          </div>
+        </div>
+        <span class="progress-num">Começando a abrir a empresa</span>
+        <div class="baloon-tips">
+          <p>Você tem muito a ganhar  sendo MEI. <br/><br/> Quer saber sobre benefícios de ser MEI?<br/> <br/><a href="#">Clique aqui</a></p>
+          <img src="/assets/images/dm_persona1.png" class="hidden-xs" />
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+</body>
+<!-- jquery validador de CPF -->
+<script type="text/javascript">
+  function validaCPF(cpf) {
+    erro = new String;
+    if (cpf.value.length == 11) {
+      cpf.value = cpf.value.replace('.', '');
+      cpf.value = cpf.value.replace('.', '');
+      cpf.value = cpf.value.replace('-', '');
+      var nonNumbers = /\D/;
+      if (nonNumbers.test(cpf.value)) {
+        erro = "A verificacao de CPF suporta apenas números!";
+      } else {
+        if (cpf.value == "00000000000" ||
+          cpf.value == "11111111111" ||
+          cpf.value == "22222222222" ||
+          cpf.value == "33333333333" ||
+          cpf.value == "44444444444" ||
+          cpf.value == "55555555555" ||
+          cpf.value == "66666666666" ||
+          cpf.value == "77777777777" ||
+          cpf.value == "88888888888" ||
+          cpf.value == "99999999999") {
+          erro = "Número de CPF inválido!"
+        }
+        var a = [];
+        var b = new Number;
+        var c = 11;
+        for (i = 0; i < 11; i++) {
+          a[i] = cpf.value.charAt(i);
+          if (i < 9) b += (a[i] * --c);
+        }
+        if ((x = b % 11) < 2) {
+          a[9] = 0
+        } else {
+          a[9] = 11 - x
+        }
+        b = 0;
+        c = 11;
+        for (y = 0; y < 10; y++) b += (a[y] * c--);
+        if ((x = b % 11) < 2) {
+          a[10] = 0;
+        } else {
+          a[10] = 11 - x;
+        }
+        if ((cpf.value.charAt(9) != a[9]) || (cpf.value.charAt(10) != a[10])) {
+          erro = "Número de CPF inválido.";
+        }
+      }
+    } else {
+      if (cpf.value.length == 0)
+        return false
+      else
+        erro = "Número de CPF inválido.";
+    }
+    if (erro.length > 0) {
+      //$('#CPF').placeholder(erro);
+      $('#CPF').val(erro);
+      $('#CPF').addClass('input-error');
+      cpf.focus();
+      return false;
+    }
+    $('#CPF').removeClass('input-error');
+    return true;
+  }
+  //envento onkeyup
+  function maskCPF(CPF) {
+    var evt = window.event;
+    kcode = evt.keyCode;
+    if (kcode == 8) return;
+    if (CPF.value.length == 3) {
+      CPF.value = CPF.value + '.';
+    }
+    if (CPF.value.length == 7) {
+      CPF.value = CPF.value + '.';
+    }
+    if (CPF.value.length == 11) {
+      CPF.value = CPF.value + '-';
+    }
+  }
+  // evento onBlur
+  function formataCPF(CPF) {
+    with(CPF) {
+      value = value.substr(0, 3) + '.' +
+        value.substr(3, 3) + '.' +
+        value.substr(6, 3) + '-' +
+        value.substr(9, 2);
+    }
+  }
+
+  function retiraFormatacao(CPF) {
+    with(CPF) {
+      value = value.replace(".", "");
+      value = value.replace(".", "");
+      value = value.replace("-", "");
+      value = value.replace("/", "");
+    }
+  }
+</script>
+
+<!-- mask -->
+<script type="text/javascript">
+  jQuery("#frm_DtNasc").mask("99/99/9999");
+  jQuery("#CPF").mask("999.999.999-99");
+</script>
+
+</html>
