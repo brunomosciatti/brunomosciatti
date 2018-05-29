@@ -5,7 +5,7 @@ Este repositório usa um "starter kit" de desenvolvedores de front-end com gulp 
 ### Gulp
 Use a pasta `bootstrap-scss-gulp` 
 
-### bootstrap
+### bootstrap (nao estou usando)
 * `assets/css/bootstrap.min.css`
 * `assets/js/jquery.1.11.3.min.js`
 * `assets/js/bootstrap.min.js`
