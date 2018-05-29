@@ -1,14 +1,9 @@
-This repo is a starter kit for front-end developers, non-gulp or gulp, so developers can easily start a new project without setting up everything all over again. For new users, refer to the guide below.
+Teste DICASMEI
 
-### For non-gulp users:
-Use `bootstrap` folder _(I recommend you to start using gulp ASAP, it's a life changer)_
+Este repositório usa um "starter kit" de desenvolvedores de front-end com gulp para compilar alguns arquivos de scss/js e outras tasks.
 
-### For gulp users
-Use `bootstrap-scss-gulp` and please refer to the guide below if you're not particularly familiar with gulp.
-
-Basically, there are two versions that would suit both non-gulp and gulp users: one is very basic that contain index.html and essential bootstrap files, another contain index.html, essential bootstrap files and gulp with features listed below.
-
-To request a new version and feature or report a bug, please open an issue.
+### Gulp
+Use a pasta `bootstrap-scss-gulp` 
 
 ### bootstrap
 * `assets/css/bootstrap.min.css`
@@ -25,23 +20,22 @@ To request a new version and feature or report a bug, please open an issue.
 * `assets/js/vendors/bootstrap.min.js`
 * `index.html`
 
-Gulp has the following tasks:
+Gulp configurado com as seguintes tasks:
 * BrowserSync (automatically refresh working files in browser on save)
 * SASS/SCSS compiler (automatically compiles SCSS to CSS on save)
 * Plumber (prevents gulp crash on SASS/SCSS error)
 * Notify (SASS/SCSS compile error tray notification)
 * CSS minifier (minifies main.min.css)
 
-### How to run gulp
-_Note: If this is your first time, please refer to 'For gulp beginners' section below._
+### Como rodar o gulp
 
-##### 1. CD to a directory 'gulp' containing `gulpfile.js`
-##### 2. Install dependencies
+##### 1. Navegue até o diretório 'gulp' da pasta que contém o arquivo `gulpfile.js`
+##### 2. Instale as dependencias
 ```
 npm install --save-dev
 ```
 
-##### 3. Start compiling, serving, and watching files
+##### 3. Rode o gulp para compilar e assistir aos arquivos
 ```
 gulp
 ```
