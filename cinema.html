@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Social Bauru - Cinema</title>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <style>
+      body {
+        padding-top: 54px;
+      }
+      @media (min-width: 992px) {
+        body {
+          padding-top: 56px;
+        }
+      }
+      .accordion {
+    background-color: #ccc;
+    color: #fff;
+    cursor: pointer;
+    height:200px;
+    margin-bottom:10px;
+    background-position:center;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+     background:#fff;
+     font-family: 'Roboto', sans-serif;
+     font-weight: 700;
+     padding:0;
+     position:relative;
+
+
+
+}
+.bg-filme {
+  background-image:url("https://cdn.socialbauru.com.br/movie/168/2018-06-14_11:03:491lugar.png");
+}
+
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+    padding: 0 18px;
+    background-color: #fff;
+    display: none;
+    overflow: hidden;
+
+}
+.panel p {
+  font-family: Verdana, Geneva, sans-serif;
+}
+h2.titulo-filme {
+  background:linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #000 100%);
+  color:#fff;
+  height:50px;
+  text-align: left;
+  padding:10px;
+  width: 100%;
+  position:absolute;
+  bottom:-10px;
+  font-size: 1.4em;
+  font-family: 'Roboto', sans-serif;
+}
+h2.titulo-filme-tipo-2 {
+  background:linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #000 100%);
+  color:#fff;
+  height:50px;
+  text-align: left;
+  padding:10px;
+  width: 100%;
+  position:absolute;
+  bottom:-10px;
+  font-size: 2em;
+  font-family: 'Roboto', sans-serif;
+}
+
+.accordion-tipo-2 {
+  height: 100%;
+}
+.label-filme {
+  position: absolute;
+  top: -10px;
+  right: 8px;
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+.label-estreia {
+  background: #f6e526;
+  color: #000;
+}
+.label-pre-estreia {
+  background:#ff1b1b;
+  color:#fff;
+}
+
+    </style>
+
+  </head>
+
+  <body>
+    <div class="container">
+      <h2>Cinema</h2>
+      <h3>Clique no filme desejado para obter mais informações</h3>
+
+      <hr>
+      <!-- background-image: <?php echo $_POST['whateverjpg']; ?> -->
+      <button class="accordion bg-filme"><h2 class="titulo-filme">Do Jeito Que Elas Querem </h2><h3 class="label-filme label-estreia">Estreia</h3></button>
+      <div class="panel">
+        <p><strong>Sinopse</strong></br>
+Quatro amigas californianas de longa data estão na casa dos 60 anos e decidem ler no clube do livro mensal o romance Cinquenta Tons de Cinza. Esse não é o tipo de livro que elas leem normalmente, o que faz com que a vida dessas mulheres bem-sucedidas e inteligentes mude.<br/><br/>
+<strong>Elenco:</strong> Diane Keaton, Jane Fonda, Candice Bergen, etc.</br>
+<strong>Direção:</strong> Bill Holderman</br>
+<strong>Duração:</strong> 1h43</br>
+<strong>Classificação:</strong> 1h43</br>
+<strong>Tipo:</strong> debut</br></br><hr>
+<strong>Multiplex:</strong>
+Legendado: Sala 2 17h30 e 21h30 (quinta, sexta, sábado, segunda, terça e quarta); 21h30 (domingo)</br></br>
+<strong>Alameda:</strong>
+</br></br>
+<strong>Cinépolis:</strong>
+Dublado: Sala 4 15h45 /
+Legendado: Sala 4 18h15 e 20h45
+</br></br>
+<a href="#">Veja o trailer</a>
+</p>
+      </div>
+      <button class="accordion accordion-tipo-2">
+      <img class="img-responsive" src="https://cdn.socialbauru.com.br/movie/167/2018-06-14_10:57:041lugar.png"/>
+      <h2 class="titulo-filme-tipo-2">Sol da Meia-Noite </h2>
+      <h3 class="label-filme label-pre-estreia">Pré-Estreia</h3>
+      </button>
+      <div class="panel">
+        <p><strong>Sinopse</strong></br>
+Katie (Bella Thorne) é jovem de 17 anos que vive protegida dentro de sua casa desde a sua infância. Confinada no local durante os dias, ela possui uma rara doença que faz com que a menor quantidade de luz solar seja mortal. Sua situação muda quando seu destino se cruza com o de Charlie (Patrick Schwarzenegger) e eles iniciam um romance.<br/><br/>
+<strong>Elenco:</strong> Bella Thorne, Patrick Schwarzenegger, Rob Riggle, etc.</br>
+<strong>Direção:</strong> Scott Speer</br>
+<strong>Duração:</strong> 92 min.</br>
+<strong>Classificação:</strong> 92 min.</br>
+<strong>Tipo:</strong> debut</br></br><hr>
+<strong>Multiplex:</strong>
+Dublado: Sala 2 19h30 (quinta, sexta, segunda, terça e quarta); 15h e 19h30 (sábado) e 19h30 (domingo)</br></br>
+<strong>Alameda:</strong>
+</br></br>
+<strong>Cinépolis:</strong>
+
+</br></br>
+<a href="#">Veja o trailer</a>
+</p>
+      </div>
+
+    </div>
+
+
+  </body>
+
+  <script type="text/javascript">
+  var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+
+        /* Toggle between hiding and showing the active panel */
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
+  </script>
+</html>
