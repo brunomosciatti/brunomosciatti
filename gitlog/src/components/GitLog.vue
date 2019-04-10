@@ -20,6 +20,7 @@
         <span v-if="error">Desculpe, nenhum usuário encontrado com o nome: "<i>{{ username }}</i>"!</span>
 
     </div>
+    <!-- <div class="repoBox" v-for="resultsRepo in orderBy(resultsRepos, 'stargazers_count')"> -->
     <div class="repoBox" v-for="resultsRepo in resultsRepos">
         <h2>{{ resultsRepo.name }}</h2>
         <h3>{{ resultsRepo.language }}</h3>

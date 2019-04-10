@@ -1,14 +1,14 @@
-// The following line loads the standalone build of Vue instead of the runtime-only build,
-// so you don't have to do: import Vue from 'vue/dist/vue'
-// This is done with the browser options. For the config, see package.json
 import Vue from 'vue'
 import axios from 'axios'
 
 import App from './App.vue'
+//import Vue2Filters from 'vue2-filters'
+//Vue.use(Vue2Filters)
 
 window.axios = axios;
 
 new Vue({ // eslint-disable-line no-new
   el: '#app',
-  render: (h) => h(App)
+  render: (h) => h(App),
+  //mixins: [Vue2Filters.mixin],
 })
