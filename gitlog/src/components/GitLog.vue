@@ -137,6 +137,7 @@ body {
   background: -webkit-linear-gradient(-45deg, #4c2863 0%,#30193d 100%);
   background: linear-gradient(135deg, #4c2863 0%,#30193d 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c2863', endColorstr='#30193d',GradientType=1 );
+  overflow-y: hidden;
 
 }
 #main {
@@ -229,6 +230,10 @@ input {
   -moz-box-shadow: 0px 6px 13px -1px rgba(0,0,0,0.36);
   box-shadow: 0px 6px 13px -1px rgba(0,0,0,0.36);
 }
+
+@media screen and (min-width: 768px) {
+  .repoBox {width:94%;}
+}
 .repoBox h2 {
   font-weight: 700;
   margin-top:0;
@@ -250,9 +255,5 @@ input {
   text-decoration: underline
 }
 
-@media only screen and (max-width: 767px) {
-  .repoBox {
-    width: 100%;
-  }
-}
+
 </style>
