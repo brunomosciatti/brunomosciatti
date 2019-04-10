@@ -53,6 +53,7 @@
                 if( this.username ){
 
                     this.loading = true;
+                    this.resultsRepos = '';
 
                     console.log("Procurando por... " + this.username );
 
@@ -90,6 +91,7 @@
                   .then(response => {
 
                       this.loading = true;
+                      this.resultsRepos = '';
 
                       console.log( response.data );
 
@@ -137,7 +139,7 @@ body {
   background: -webkit-linear-gradient(-45deg, #4c2863 0%,#30193d 100%);
   background: linear-gradient(135deg, #4c2863 0%,#30193d 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c2863', endColorstr='#30193d',GradientType=1 );
-  overflow-y: hidden;
+  overflow-x: hidden;
 
 }
 #main {
@@ -170,6 +172,9 @@ input {
     border:none;
     border-radius:6px;
     outline:0;
+    -webkit-box-shadow: 0px 6px 13px -1px rgba(0,0,0,0.36);
+    -moz-box-shadow: 0px 6px 13px -1px rgba(0,0,0,0.36);
+    box-shadow: 0px 6px 13px -1px rgba(0,0,0,0.36);
 }
 .has-error {
     border: 1px solid #96281B;
@@ -197,7 +202,7 @@ input {
 }
 
 #btnSearchRepos {
-  border-radius: 0 0 5px 5px;
+  border-radius:5px;
   background: #e250d7;
   box-shadow:0 6px #b941b0;
   border: none;
@@ -213,6 +218,7 @@ input {
 
 #btnSearchRepos:hover {
   box-shadow:0 2px #b941b0;
+  background: #e330d5;
   top:2px;
 }
 .repoBox {
@@ -231,7 +237,7 @@ input {
   box-shadow: 0px 6px 13px -1px rgba(0,0,0,0.36);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .repoBox {width:94%;}
 }
 .repoBox h2 {
